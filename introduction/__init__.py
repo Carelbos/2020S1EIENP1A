@@ -4,12 +4,12 @@ import check50.c
 @check50.check()
 def exists():
     """month.c exists"""
-    check50.exists("month")
+    check50.exists("month.c")
     
 @check50.check(exists)
 def compiles():
     """month compiles"""
-    check50.c.compile("month")
+    check50.c.compile("month.c")
 
 @check50.check(compiles)
 def test1():
