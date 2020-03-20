@@ -28,3 +28,10 @@ check50:
         stdin: 15
         stdout: 15
         exit: 0
+        
+    100 output 100:
+      - run: g++ pset1.cpp -lcrypt -lcs50 -lm -o pset1
+      - run: ./pset1
+        stdin: 100
+        stdout: 100
+        exit: 0
