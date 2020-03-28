@@ -1,0 +1,37 @@
+check50: 
+  files: &check50_files
+    - !exclude "*"
+    - !require pset1.cpp
+
+submit50:
+  files: *check50_files
+ 
+check50:
+  checks:
+    5 outputs 5:
+      - run: g++ pset1.cpp -lcrypt -lcs50 -lm -o pset1
+      - run: ./pset1
+        stdin: 5
+        stdout: 5
+        exit: 0
+        
+    10 outputs 10:
+      - run: g++ pset1.cpp -lcrypt -lcs50 -lm -o pset1
+      - run: ./pset1
+        stdin: 10
+        stdout: 10
+        exit: 0
+        
+    15 output 15:
+      - run: g++ pset1.cpp -lcrypt -lcs50 -lm -o pset1
+      - run: ./pset1
+        stdin: 15
+        stdout: 15
+        exit: 0
+        
+    100 output 100:
+      - run: g++ pset1.cpp -lcrypt -lcs50 -lm -o pset1
+      - run: ./pset1
+        stdin: 100
+        stdout: 100
+        exit: 0
